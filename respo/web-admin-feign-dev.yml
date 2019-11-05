@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: "@artifactId@"
+  thymeleaf:
+    cache: false
+    mode: LEGACYHTML5
+    encoding: UTF-8
+    servlet:
+      content-type: text/html
+
+server:
+  port: 8766
+
+# 注册中心配置
+eureka:
+  instance:
+    prefer-ip-address: true
+    hostname: hello-eureka
+  client:
+    service-url:
+      defaultZone: http://qhtf:qhtf2019@hello-eureka:8761/eureka/  #这里填eureka地址
+
+
+
+feign:
+  hystrix:
+    enabled: true  #开启熔断配置
