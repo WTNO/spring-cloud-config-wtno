@@ -1,6 +1,6 @@
 spring:
   application:
-    name: "@artifactId@"
+    name: hello-spring-cloud-web-admin-feign #在这里如果用@artifactId@会导致直接将其作为服务名
   thymeleaf:
     cache: false
     mode: LEGACYHTML5
